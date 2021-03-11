@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+  #box {
+    background: darkgray;
+    color: black;
+    width: 500px;
+    height: 90px;
+    padding: 40px;
+    text-align: center;
+    font-size: x-large;
+  }  
+</style>
+
+</head>
+<body>
+<header>
+
+</header>
+<script>
+    $(document).ready(function() {
+        //alert 
+        $('#btn1').click(function(){
+            alert('Button Clicked!');
+        });
+        //fade out 
+        $('#btn2').click(function(){
+            $('#box').fadeOut('5000', function(){
+                $('#btn2').text('its gone');
+            });
+        });
+        //fade in
+        $('#btn3').click(function(){
+            $('#box').fadeIn('5000');
+        });
+        //toggle
+        $('#btn4').click(function(){
+            $('#box').toggle();
+        });
+    });
+</script>
+<div id="container">
+    <h3>jQuery Events and Effects</h3>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Fade Out</button>
+    <button id="btn3">Fade In</Inp></button>
+    <button id="btn4">Toggle</button>
+
+    <div id="box">Hello World</div>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+</div>
+
+
+</body>
+</html>
